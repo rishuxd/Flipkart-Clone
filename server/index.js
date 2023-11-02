@@ -14,7 +14,7 @@ const PASSWORD = process.env.DB_PASSWORD;
 
 app.use(
   cors({
-    origin: ["https://flipkart-clone-frontend-blond.vercel.app"],
+    origin: ["https://flipkart-clone-frontend-blond.vercel.app/"],
     methods: ["POST", "GET"],
     credentials: true,
   })
