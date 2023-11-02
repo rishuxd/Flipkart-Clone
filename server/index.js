@@ -14,7 +14,7 @@ const PASSWORD = process.env.DB_PASSWORD;
 
 app.use(
   cors({
-    origin: ["https://deploy-mern-frontend.vercel.app"],
+    origin: ["https://flipkart-clone-phi-dun.vercel.app/"],
     methods: ["POST", "GET"],
     credentials: true,
   })
