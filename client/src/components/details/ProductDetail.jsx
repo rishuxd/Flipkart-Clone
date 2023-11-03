@@ -25,7 +25,7 @@ const ProductDetail = () => {
   }, [id]);
 
    if (loading) {
-    return null;
+    return <Container1></Container1>
   }
 
   return (
