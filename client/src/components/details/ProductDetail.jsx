@@ -7,6 +7,7 @@ import { getProductById } from "../../services/api";
 
 const ProductDetail = () => {
   const [product, setProduct] = useState([]);
+  const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
   useEffect(() => {
@@ -14,6 +15,7 @@ const ProductDetail = () => {
       try {
         const { data } = await getProductById(id);
         setProduct(data);
+        setLoading(false);
       } catch (error) {
         console.log("Error while fetching product.", error);
       }
@@ -22,9 +24,13 @@ const ProductDetail = () => {
     fetchProducts();
   }, [id]);
 
+   if (loading) {
+    return null;
+  }
+
   return (
     <Container1>
-      {product && (
+      {product && Object.keys(product).length && (
         <Container2 container>
           <Grid item lg={4} md={4} sm={8} xs={12}>
             <LeftDetails product={product} />
