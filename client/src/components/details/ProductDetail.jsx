@@ -10,12 +10,10 @@ const ProductDetail = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    console.log("hi");
     const fetchProducts = async () => {
       try {
         const { data } = await getProductById(id);
         setProduct(data);
-        console.log(data);
       } catch (error) {
         console.log("Error while fetching product.", error);
       }
@@ -26,7 +24,7 @@ const ProductDetail = () => {
 
   return (
     <Container1>
-      {product && Object.keys(product).length && (
+      {product && (
         <Container2 container>
           <Grid item lg={4} md={4} sm={8} xs={12}>
             <LeftDetails product={product} />
