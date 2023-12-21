@@ -1,5 +1,4 @@
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import { Box, styled } from "@mui/material";
 import { bannerData } from "../../constants/data";
 
@@ -21,7 +20,7 @@ const responsive = {
 const Image = styled("img")(({ theme }) => ({
   width: "100%",
   height: 280,
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("sm")]: {
     objectFit: "cover",
     height: 180,
   },

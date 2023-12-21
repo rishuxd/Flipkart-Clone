@@ -7,6 +7,7 @@ import { getProductById } from "../../services/api";
 
 const ProductDetail = () => {
   const [product, setProduct] = useState([]);
+  const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
   useEffect(() => {
@@ -23,6 +24,10 @@ const ProductDetail = () => {
 
     fetchProducts();
   }, [id]);
+
+  if (loading) {
+    return <Container1></Container1>;
+  }
 
   return (
     <Container1>

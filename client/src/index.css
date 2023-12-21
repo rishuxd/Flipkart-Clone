@@ -1,6 +1,6 @@
 body {
   overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-x: scroll;
   margin: 0;
   padding: 0;
   font-smooth: always;
@@ -10,10 +10,9 @@ body {
 body,
 html {
   background-color: #f3f2ef;
+  width: 100%;
   box-sizing: border-box;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 div,

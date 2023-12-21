@@ -15,14 +15,16 @@ const NavContainer = styled.div`
   max-width: 1280px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
   color: #212121;
+  overflow-x: auto;
+  white-space: nowrap;
+  justify-content: space-between;
+  &::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari and Opera */
+  }
 `;
 
 const Box1 = styled.div`
-  &:first-child {
-    padding-left: 22px;
-  }
   padding: 12px 8px;
   text-align: center;
   cursor: pointer;

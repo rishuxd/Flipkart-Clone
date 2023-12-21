@@ -73,17 +73,20 @@ const Header = () => {
                 alt=""
               />
             </Badge>
-            <span>Cart</span>
+            <p>Cart</p>
           </a>
         </Cart>
-        <Cart>
+        <Dot>
           <img
             src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_3verticalDots-ea7819.svg"
             alt=""
           />
-        </Cart>
+        </Dot>
         <LoginDialog open={open} setOpen={setOpen} />
       </WidthContainer>
+      <OutsideSearch>
+        <Search />
+      </OutsideSearch>
     </Container>
   );
 };
@@ -103,7 +106,7 @@ const WidthContainer = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 
 const LogoDiv = styled.div`
@@ -135,11 +138,24 @@ const LogoDiv = styled.div`
       }
     }
   }
+  @media (max-width: 768px) {
+    margin-left: -60px;
+  }
 `;
 
 const SearchContainer = styled.div`
-  min-width: 200px;
   width: 100%;
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const OutsideSearch = styled.div`
+  padding: 12px 10px;
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;
 
 const LoginButton = styled.div`
@@ -174,6 +190,8 @@ const BecomeASeller = styled.div`
       margin-right: 8px;
     }
   }
+  @media (max-width: 768px) {
+    display: none;
 `;
 
 const Cart = styled.div`
@@ -186,9 +204,15 @@ const Cart = styled.div`
     font-size: 16px;
     line-height: 24px;
     text-decoration: none;
-    span {
+    p {
       margin-left: 10px;
     }
+  }
+`;
+
+const Dot = styled(Cart)`
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 
