@@ -24,13 +24,8 @@ const ProductDetail = () => {
     fetchProducts();
   }, [id]);
 
-<<<<<<< HEAD
   if (loading) {
     return <Container1></Container1>;
-=======
-   if (loading) {
-    return <Container1></Container1>
->>>>>>> 459a8a76882c73e389c2bafdcf07a09ae18d3b74
   }
 
   return (
