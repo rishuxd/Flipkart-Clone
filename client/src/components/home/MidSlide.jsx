@@ -3,7 +3,6 @@ import { Grid, styled } from "@mui/material";
 const Container = styled(Grid)`
   margin: 0 10px;
   margin-bottom: 10px;
-  height: 280px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 `;
 

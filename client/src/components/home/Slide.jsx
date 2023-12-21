@@ -28,7 +28,6 @@ const Slide = (props) => {
       <Bottom>
         <Carousel
           responsive={responsive}
-          swipeable={false}
           draggable={false}
           keyBoardControl={true}
           dotListClass="custom-dot-list-style"
